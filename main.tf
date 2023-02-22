@@ -13,8 +13,9 @@ provider "aws" {
   region = "us-west-2"
 }
 
+
 resource "aws_lambda_function" "lambda_docs_function" {
-  filename      = "README.md"
+  filename      = "README.md.zip"
   function_name = "lambda-function"
   role          = aws_iam_role.lambda_exec_iam_role.arn
   handler       = "get_export.lambda_handler"
