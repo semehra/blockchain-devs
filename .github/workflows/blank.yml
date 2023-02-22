@@ -30,12 +30,12 @@ jobs:
 
       - name: TF format
         run: terraform fmt -recursive -check
-        
-      - name: TF validation
-        run: terraform validate
 
       - name: TF init
         run: terraform init
+        
+      - name: TF validation
+        run: terraform validate
       
       - name: TF plan
         run: terraform plan
